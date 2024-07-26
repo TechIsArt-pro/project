@@ -1,0 +1,741 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Periodic Table
+{% endblock %}
+
+<!--{% block name %}
+<li class="right">Loged in as {{username[0]["username"]}}<li>
+{% endblock %}-->
+
+{% block main %}
+
+<!--not all the elements have a proper description but 3 do for demonstration purposes-->
+
+        <h1 class="centered">Periodic Table</h1>
+        <div class="periodic-table">
+            <div id="H" class="element hover expandable nonmetal" onclick="expand('H')">
+                <div class="title">H</div>
+                <div class="description">Hydrogen</div>
+                <div class="content"> <p>Atomic number: 1 <br>Atomic mass: 35.45<br>Element group: nonmetal </p> </div>
+            </div>
+
+            <div id="gap1"></div>
+            
+            <div id="He" class="element hover expandable noblegas" onclick="expand('He')">
+                <div class="title">He</div>
+                <div class="description"> Helium</div>
+                <div class="content"> <p> h </p> </div>
+            </div>
+            
+            <div id="Li" class="element hover expandable alkalimetal" onclick="expand('Li')">
+                <div class="title">Li</div>
+                <div class="description"> Lithium</div>
+                <div class="content"> <p> h </p> </div>
+            </div>
+
+            <div id="Be" class="element hover expandable alkalineearthmetal" onclick="expand('Be')">
+                <div class="title">Be</div>
+                <div class="description"> Beryllium</div>
+                <div class="content"> <p> h </p> </div>
+            </div>
+
+            <div id="gap2"></div>
+            
+            <div id="B" class="element hover expandable metalloid" onclick="expand('B')">
+                <div class="title">B</div>
+                <div class="description"> Boron</div>
+                <div class="content"> <p> h </p> </div>
+            </div>
+
+            <div id="C" class="element hover expandable nonmetal" onclick="expand('C')">
+                <div class="title">C</div>
+                <div class="description"> Carbon</div>
+                <div class="content"> <p> h </p> </div>
+            </div>
+
+            <div id="N" class="element hover expandable nonmetal" onclick="expand('N')">
+                <div class="title">N</div>
+                <div class="description"> Nitrogen</div>
+                <div class="content"> <p> h </p> </div>
+            </div>
+
+            <div id="O" class="element hover expandable nonmetal" onclick="expand('O')">
+                <div class="title">O</div>
+                <div class="description"> Oxygen</div>
+                <div class="content"> <p> h </p> </div>
+            </div>
+
+            <div id="F" class="element hover expandable nonmetal" onclick="expand('F')">
+                <div class="title">F</div>
+                <div class="description"> Fluorine</div>
+                <div class="content"> <p> h </p> </div>
+            </div>
+
+            <div id="Ne" class="element hover expandable noblegas" onclick="expand('Ne')">
+                <div class="title">Ne</div>
+                <div class="description"> Neon </div>
+                <div class="content"> <p> h </p> </div>
+            </div>
+
+            <div id="Na" class="element hover expandable alkalimetal" onclick="expand('Na')">
+                <div class="title">Na</div>
+                <div class="description"> Sodium </div>
+                <div class="content"> <p> h </p> </div>
+            </div>
+
+            <div id="Mg" class="element hover expandable alkalineearthmetal" onclick="expand('Mg')">
+                <div class="title">Mg</div>
+                <div class="description"> Magnesium </div>
+                <div class="content"> <p> h </p> </div>
+            </div>
+
+            <div id="gap3"></div>
+
+            <div id="Al" class="element hover expandable posttransitionmetal" onclick="expand('Al')">
+                <div class="title">Al</div>
+                <div class="description"> Aluminium </div>
+                <div class="content"> <p> Atomic number: 13 <br> Atomic mass: 27<br> Element group: post-transition metal</p> </div>
+            </div>
+            
+            <div id="Si" class="element hover expandable metalloid" onclick="expand('Si')">
+                <div class="title">Si</div>
+                <div class="description"> Silicon </div>
+                <div class="content"> <p> h </p> </div>
+            </div>
+
+            <div id="P" class="element hover expandable nonmetal" onclick="expand('P')">
+                <div class="title">P</div>
+                <div class="description"> Phosphorus </div>
+                <div class="content"> <p> h </p> </div>
+            </div>
+
+            <div id="S" class="element hover expandable nonmetal" onclick="expand('S')">
+                <div class="title">S</div>
+                <div class="description"> Sulfur </div>
+                <div class="content"> <p> h </p> </div>
+            </div>
+
+            <div id="Cl" class="element hover expandable nonmetal" onclick="expand('Cl')">
+                <div class="title">Cl</div>
+                <div class="description"> Chlorine </div>
+                <div class="content"> <p> h </p> </div>
+            </div>
+
+            <div id="Ar" class="element hover expandable noblegas" onclick="expand('Ar')">
+                <div class="title">Ar</div>
+                <div class="description"> Argon </div>
+                <div class="content"> <p> h </p> </div>
+            </div>
+
+            <div id="K" class="element hover expandable alkalimetal" onclick="expand('K')">
+                <div class="title">K</div>
+                <div class="description"> Potassium </div>
+                <div class="content"> <p> h </p> </div>
+            </div>
+            
+            <div id="Ca" class="element hover expandable alkalineearthmetal" onclick="expand('Ca')">
+                <div class="title">Ca</div>
+                <div class="description"> Calcium </div>
+                <div class="content"> <p> h </p> </div>
+            </div>
+            
+            <div id="Sc" class="element hover expandable transitionmetal" onclick="expand('Sc')">
+                <div class="title">Sc</div>
+                <div class="description"> Scandium </div>
+                <div class="content"> <p> h </p> </div>
+            </div>
+
+            <div id="Ti" class="element hover expandable transitionmetal" onclick="expand('Ti')">
+                <div class="title">Ti</div>
+                <div class="description"> Titanium </div>
+                <div class="content"> <p> h </p> </div>
+            </div>
+
+            <div id="V" class="element hover expandable transitionmetal" onclick="expand('V')">
+                <div class="title">V</div>
+                <div class="description"> Vanadium </div>
+                <div class="content"> <p> h </p> </div>
+            </div>
+
+            <div id="Cr" class="element hover expandable transitionmetal" onclick="expand('Cr')">
+                <div class="title">Cr</div>
+                <div class="description"> Chromium </div>
+                <div class="content"> <p> h </p> </div>
+            </div>
+
+            <div id="Mn" class="element hover expandable transitionmetal" onclick="expand('Mn')">
+                <div class="title">Mn</div>
+                <div class="description"> Manganese </div>
+                <div class="content"> <p> h </p> </div>
+            </div>
+
+            <div id="Fe" class="element hover expandable transitionmetal" onclick="expand('Fe')">
+                <div class="title">Fe</div>
+                <div class="description"> Iron </div>
+                <div class="content"> <p> Atomic number: 26 <br> Atomic mass: 55.84<br> Element group: transition metal</p> </div>
+            </div>
+
+            <div id="Co" class="element hover expandable transitionmetal" onclick="expand('Co')">
+                <div class="title">Co</div>
+                <div class="description"> Cobalt </div>
+                <div class="content"> <p> h </p> </div>
+            </div>
+            
+            <div id="Ni" class="element hover expandable transitionmetal" onclick="expand('Ni')">
+                <div class="title">Ni</div>
+                <div class="description"> Nickel </div>
+                <div class="content"> <p> h </p> </div>
+            </div>
+
+            <div id="Cu" class="element hover expandable transitionmetal" onclick="expand('Cu')">
+                <div class="title">Cu</div>
+                <div class="description"> Copper </div>
+                <div class="content"> <p> h </p> </div>
+            </div>
+
+            <div id="Zn" class="element hover expandable transitionmetal" onclick="expand('Zn')">
+                <div class="title">Zn</div>
+                <div class="description"> Zinc </div>
+                <div class="content"> <p> h </p> </div>
+            </div>
+
+            <div id="Ga" class="element hover expandable posttransitionmetal" onclick="expand('Ga')">
+                <div class="title">Ga</div>
+                <div class="description"> Gallium </div>
+                <div class="content"> <p> h </p> </div>
+            </div>
+
+            <div id="Ge" class="element hover expandable metalloid" onclick="expand('Ge')">
+                <div class="title">Ge</div>
+                <div class="description"> Germanium </div>
+                <div class="content"> <p> h </p> </div>
+            </div>
+
+            <div id="As" class="element hover expandable metalloid" onclick="expand('As')">
+                <div class="title">As</div>
+                <div class="description"> Arsenic </div>
+                <div class="content"> <p> h </p> </div>
+            </div>
+
+            <div id="Se" class="element hover expandable nonmetal" onclick="expand('Se')">
+                <div class="title">Se</div>
+                <div class="description"> Selinium </div>
+                <div class="content"> <p> h </p> </div>
+            </div>
+
+            <div id="Br" class="element hover expandable nonmetal" onclick="expand('Br')">
+                <div class="title">Br</div>
+                <div class="description"> Bromine </div>
+                <div class="content"> <p> h </p> </div>
+            </div>
+
+            <div id="Kr" class="element hover expandable noblegas" onclick="expand('Kr')">
+                <div class="title">Kr</div>
+                <div class="description"> Krypton </div>
+                <div class="content"> <p> h </p> </div>
+            </div>
+
+            <div id="Rb" class="element hover expandable alkalimetal" onclick="expand('Rb')">
+                <div class="title">Rb</div>
+                <div class="description"> Rubidium </div>
+                <div class="content"> <p> h </p> </div>
+            </div>
+
+            <div id="Sr" class="element hover expandable alkalineearthmetal" onclick="expand('Sr')">
+                <div class="title">Sr</div>
+                <div class="description"> Strontium </div>
+                <div class="content"> <p> h </p> </div>
+            </div>
+
+            <div id="Y" class="element hover expandable transitionmetal" onclick="expand('Y')">
+                <div class="title">Y</div>
+                <div class="description"> Yttrium </div>
+                <div class="content"> <p> h </p> </div>
+            </div>
+
+            <div id="Zr" class="element hover expandable transitionmetal" onclick="expand('Zr')">
+                <div class="title">Zr</div>
+                <div class="description"> Zicronium </div>
+                <div class="content"> <p> h </p> </div>
+            </div>
+
+            <div id="Nb" class="element hover expandable transitionmetal" onclick="expand('Nb')">
+                <div class="title">Nb</div>
+                <div class="description"> Niobium </div>
+                <div class="content"> <p> h </p> </div>
+            </div>
+
+            <div id="Mo" class="element hover expandable transitionmetal" onclick="expand('Mo')">
+                <div class="title">Mo</div>
+                <div class="description"> Molybdenum </div>
+                <div class="content"> <p> h </p> </div>
+            </div>
+
+            <div id="Tc" class="element hover expandable transitionmetal" onclick="expand('Tc')">
+                <div class="title">Tc</div>
+                <div class="description"> Technetium </div>
+                <div class="content"> <p> h </p> </div>
+            </div>
+
+            <div id="Ru" class="element hover expandable transitionmetal" onclick="expand('Ru')">
+                <div class="title">Ru</div>
+                <div class="description"> Ruthenium </div>
+                <div class="content"> <p> h </p> </div>
+            </div>
+
+            <div id="Rh" class="element hover expandable transitionmetal" onclick="expand('Rh')">
+                <div class="title">Rh</div>
+                <div class="description"> Rhodium </div>
+                <div class="content"> <p> h </p> </div>
+            </div>
+
+            <div id="Pd" class="element hover expandable transitionmetal" onclick="expand('Pd')">
+                <div class="title">Pd</div>
+                <div class="description"> Palladium </div>
+                <div class="content"> <p> h </p> </div>
+            </div>
+
+            <div id="Ag" class="element hover expandable transitionmetal" onclick="expand('Ag')">
+                <div class="title">Ag</div>
+                <div class="description"> Silver </div>
+                <div class="content"> <p> h </p> </div>
+            </div>
+
+            <div id="Cd" class="element hover expandable transitionmetal" onclick="expand('Cd')">
+                <div class="title">Cd</div>
+                <div class="description"> Cadmium </div>
+                <div class="content"> <p> h </p> </div>
+            </div>
+
+            <div id="In" class="element hover expandable posttransitionmetal" onclick="expand('In')">
+                <div class="title">In</div>
+                <div class="description"> Indium </div>
+                <div class="content"> <p> h </p> </div>
+            </div>
+
+            <div id="Sn" class="element hover expandable posttransitionmetal" onclick="expand('Sn')">
+                <div class="title">Sn</div>
+                <div class="description"> Tin </div>
+                <div class="content"> <p> h </p> </div>
+            </div>
+
+            <div id="Sb" class="element hover expandable metalloid" onclick="expand('Sb')">
+                <div class="title">Sb</div>
+                <div class="description"> Antimony </div>
+                <div class="content"> <p> h </p> </div>
+            </div>
+
+            <div id="Te" class="element hover expandable metalloid" onclick="expand('Te')">
+                <div class="title">Te</div>
+                <div class="description"> Tellerium </div>
+                <div class="content"> <p> h </p> </div>
+            </div>
+
+            <div id="I" class="element hover expandable nonmetal" onclick="expand('I')">
+                <div class="title">I</div>
+                <div class="description"> Iodine </div>
+                <div class="content"> <p> h </p> </div>
+            </div>
+
+            <div id="Xe" class="element hover expandable noblegas" onclick="expand('Xe')">
+                <div class="title">Xe</div>
+                <div class="description"> Xenon </div>
+                <div class="content"> <p> h </p> </div>
+            </div>
+
+            <div id="Cs" class="element hover expandable alkalimetal" onclick="expand('Cs')">
+                <div class="title">Cs</div>
+                <div class="description"> Cesium </div>
+                <div class="content"> <p> h </p> </div>
+            </div>
+
+            <div id="Ba" class="element hover expandable alkalineearthmetal" onclick="expand('Ba')">
+                <div class="title">Ba</div>
+                <div class="description"> Barium </div>
+                <div class="content"> <p> h </p> </div>
+            </div>
+
+            <div id="La" class="element hover expandable lanthanide" onclick="expand('La')">
+                <div class="title">La</div>
+                <div class="description"> Lanthanium </div>
+                <div class="content"> <p> h </p> </div>
+            </div>
+
+            <div id="Hf" class="element hover expandable transitionmetal" onclick="expand('Hf')">
+                <div class="title">Hf</div>
+                <div class="description"> Hafnium </div>
+                <div class="content"> <p> h </p> </div>
+            </div>
+
+            <div id="Ta" class="element hover expandable transitionmetal" onclick="expand('Ta')">
+                <div class="title">Ta</div>
+                <div class="description"> Tantalum </div>
+                <div class="content"> <p> h </p> </div>
+            </div>
+
+            <div id="W" class="element hover expandable transitionmetal" onclick="expand('W')">
+                <div class="title">W</div>
+                <div class="description"> Tungsten </div>
+                <div class="content"> <p> h </p> </div>
+            </div>
+
+            <div id="Re" class="element hover expandable transitionmetal" onclick="expand('Re')">
+                <div class="title">Re</div>
+                <div class="description"> Rhenium </div>
+                <div class="content"> <p> h </p> </div>
+            </div>
+
+            <div id="Os" class="element hover expandable transitionmetal" onclick="expand('Os')">
+                <div class="title">Os</div>
+                <div class="description"> Osmium </div>
+                <div class="content"> <p> h </p> </div>
+            </div>
+
+            <div id="Ir" class="element hover expandable transitionmetal" onclick="expand('Ir')">
+                <div class="title">Ir</div>
+                <div class="description"> Iridium </div>
+                <div class="content"> <p> h </p> </div>
+            </div>
+
+            <div id="Pt" class="element hover expandable transitionmetal" onclick="expand('Pt')">
+                <div class="title">Pt</div>
+                <div class="description"> Platinum </div>
+                <div class="content"> <p> h </p> </div>
+            </div>
+
+            <div id="Au" class="element hover expandable transitionmetal" onclick="expand('Au')">
+                <div class="title">Au</div>
+                <div class="description"> Gold </div>
+                <div class="content"> <p> h </p> </div>
+            </div>
+
+            <div id="Hg" class="element hover expandable transitionmetal" onclick="expand('Hg')">
+                <div class="title">Hg</div>
+                <div class="description"> Mercury </div>
+                <div class="content"> <p> h </p> </div>
+            </div>
+
+            <div id="Tl" class="element hover expandable posttransitionmetal" onclick="expand('Tl')">
+                <div class="title">Tl</div>
+                <div class="description"> Thallium </div>
+                <div class="content"> <p> h </p> </div>
+            </div>
+
+            <div id="Pb" class="element hover expandable posttransitionmetal" onclick="expand('Pb')">
+                <div class="title">Pb</div>
+                <div class="description"> Lead </div>
+                <div class="content"> <p> h </p> </div>
+            </div>
+
+            <div id="Bi" class="element hover expandable posttransitionmetal" onclick="expand('Bi')">
+                <div class="title">Bi</div>
+                <div class="description"> Bismuth </div>
+                <div class="content"> <p> h </p> </div>
+            </div>
+
+            <div id="Po" class="element hover expandable metalloid" onclick="expand('Po')">
+                <div class="title">Po</div>
+                <div class="description"> Polonium </div>
+                <div class="content"> <p> h </p> </div>
+            </div>
+
+            <div id="At" class="element hover expandable nonmetal" onclick="expand('At')">
+                <div class="title">At</div>
+                <div class="description"> Astatine </div>
+                <div class="content"> <p> h </p> </div>
+            </div>
+
+            <div id="Rn" class="element hover expandable noblegas" onclick="expand('Rn')">
+                <div class="title">Rn</div>
+                <div class="description"> Radon </div>
+                <div class="content"> <p> h </p> </div>
+            </div>
+
+            <div id="Fr" class="element hover expandable alkalimetal" onclick="expand('Fr')">
+                <div class="title">Fr</div>
+                <div class="description"> Francium </div>
+                <div class="content"> <p> h </p> </div>
+            </div>
+
+            <div id="Ra" class="element hover expandable alkalineearthmetal" onclick="expand('Ra')">
+                <div class="title">Ra</div>
+                <div class="description"> Radium </div>
+                <div class="content"> <p> h </p> </div>
+            </div>
+
+            <div id="Ac" class="element hover expandable actinide" onclick="expand('Ac')">
+                <div class="title">Ac</div>
+                <div class="description"> Actinium </div>
+                <div class="content"> <p> h </p> </div>
+            </div>
+
+            <div id="Rf" class="element hover expandable transitionmetal" onclick="expand('Rf')">
+                <div class="title">Rf</div>
+                <div class="description"> Rutherfordium </div>
+                <div class="content"> <p> h </p> </div>
+            </div>
+
+            <div id="Db" class="element hover expandable transitionmetal" onclick="expand('Db')">
+                <div class="title">Db</div>
+                <div class="description"> Dubnium </div>
+                <div class="content"> <p> h </p> </div>
+            </div>
+
+            <div id="Sg" class="element hover expandable transitionmetal" onclick="expand('Sg')">
+                <div class="title">Sg</div>
+                <div class="description"> Seaborgium </div>
+                <div class="content"> <p> h </p> </div>
+            </div>
+
+            <div id="Bh" class="element hover expandable transitionmetal" onclick="expand('Bh')">
+                <div class="title">Bh</div>
+                <div class="description"> Bhorium </div>
+                <div class="content"> <p> h </p> </div>
+            </div>
+
+            <div id="Hs" class="element hover expandable transitionmetal" onclick="expand('Hs')">
+                <div class="title">Hs</div>
+                <div class="description"> Hassium </div>
+                <div class="content"> <p> h </p> </div>
+            </div>
+
+            <div id="Mt" class="element hover expandable transitionmetal" onclick="expand('Mt')">
+                <div class="title">Mt</div>
+                <div class="description"> Meitnerium </div>
+                <div class="content"> <p> h </p> </div>
+            </div>
+
+            <div id="Ds" class="element hover expandable transitionmetal" onclick="expand('Ds')">
+                <div class="title">Ds</div>
+                <div class="description"> Darmstadtium </div>
+                <div class="content"> <p> h </p> </div>
+            </div>
+
+            <div id="Rg" class="element hover expandable transitionmetal" onclick="expand('Rg')">
+                <div class="title">Rg</div>
+                <div class="description"> Roentgenium </div>
+                <div class="content"> <p> h </p> </div>
+            </div>
+
+            <div id="Cn" class="element hover expandable transitionmetal" onclick="expand('Cn')">
+                <div class="title">Cn</div>
+                <div class="description"> Copernicium </div>
+                <div class="content"> <p> h </p> </div>
+            </div>
+
+            <div id="Nh" class="element hover expandable posttransitionmetal" onclick="expand('Nh')">
+                <div class="title">Nh</div>
+                <div class="description"> Nihonium </div>
+                <div class="content"> <p> h </p> </div>
+            </div>
+
+            <div id="Fl" class="element hover expandable posttransitionmetal" onclick="expand('Fl')">
+                <div class="title">FL</div>
+                <div class="description"> Flevorium </div>
+                <div class="content"> <p> h </p> </div>
+            </div>
+
+            <div id="Mc" class="element hover expandable posttransitionmetal" onclick="expand('Mc')">
+                <div class="title">Mc</div>
+                <div class="description"> Moscovium </div>
+                <div class="content"> <p> h </p> </div>
+            </div>
+
+            <div id="Lv" class="element hover expandable posttransitionmetal" onclick="expand('Lv')">
+                <div class="title">Lv</div>
+                <div class="description"> Livermorium </div>
+                <div class="content"> <p> h </p> </div>
+            </div>
+
+            <div id="Ts" class="element hover expandable nonmetal" onclick="expand('Ts')">
+                <div class="title">Ts</div>
+                <div class="description"> Tennessine </div>
+                <div class="content"> <p> h </p> </div>
+            </div>
+
+            <div id="Og" class="element hover expandable noblegas" onclick="expand('Og')">
+                <div class="title">Og</div>
+                <div class="description"> Oganesson </div>
+                <div class="content"> <p> h </p> </div>
+            </div>
+
+            <div id="gap4"></div>
+
+            <div id="Ce" class="element hover expandable lanthanide" onclick="expand('Ce')">
+                <div class="title">Ce</div>
+                <div class="description"> Cerium </div>
+                <div class="content"> <p> h </p> </div>
+            </div>
+
+            <div id="Pr" class="element hover expandable lanthanide" onclick="expand('Pr')">
+                <div class="title">Pr</div>
+                <div class="description"> Praseodymium </div>
+                <div class="content"> <p> h </p> </div>
+            </div>
+
+            <div id="Nd" class="element hover expandable lanthanide" onclick="expand('Nd')">
+                <div class="title">Nd</div>
+                <div class="description"> Neodymium </div>
+                <div class="content"> <p> h </p> </div>
+            </div>
+
+            <div id="Pm" class="element hover expandable lanthanide" onclick="expand('Pm')">
+                <div class="title">Pm</div>
+                <div class="description"> Promethium </div>
+                <div class="content"> <p> h </p> </div>
+            </div>
+
+            <div id="Sm" class="element hover expandable lanthanide" onclick="expand('Sm')">
+                <div class="title">Sm</div>
+                <div class="description"> Samarium </div>
+                <div class="content"> <p> h </p> </div>
+            </div>
+
+            <div id="Eu" class="element hover expandable lanthanide" onclick="expand('Eu')">
+                <div class="title">Eu</div>
+                <div class="description"> Europium </div>
+                <div class="content"> <p> h </p> </div>
+            </div>
+
+            <div id="Gd" class="element hover expandable lanthanide" onclick="expand('Gd')">
+                <div class="title">Gd</div>
+                <div class="description"> Gadolinium </div>
+                <div class="content"> <p> h </p> </div>
+            </div>
+
+            <div id="Tb" class="element hover expandable lanthanide" onclick="expand('Tb')">
+                <div class="title">Tb</div>
+                <div class="description"> Terbium </div>
+                <div class="content"> <p> h </p> </div>
+            </div>
+
+            <div id="Dy" class="element hover expandable lanthanide" onclick="expand('Dy')">
+                <div class="title">Dy</div>
+                <div class="description"> Dysprosium </div>
+                <div class="content"> <p> h </p> </div>
+            </div>
+
+            <div id="Ho" class="element hover expandable lanthanide" onclick="expand('Ho')">
+                <div class="title">Ho</div>
+                <div class="description"> Holmium </div>
+                <div class="content"> <p> h </p> </div>
+            </div>
+
+            <div id="Er" class="element hover expandable lanthanide" onclick="expand('Er')">
+                <div class="title">Er</div>
+                <div class="description"> Erbium </div>
+                <div class="content"> <p> h </p> </div>
+            </div>
+
+            <div id="Tm" class="element hover expandable lanthanide" onclick="expand('Tm')">
+                <div class="title">Tm</div>
+                <div class="description"> Thulium </div>
+                <div class="content"> <p> h </p> </div>
+            </div>
+
+            <div id="Yb" class="element hover expandable lanthanide" onclick="expand('Yb')">
+                <div class="title">Yb</div>
+                <div class="description"> Ytterbium </div>
+                <div class="content"> <p> h </p> </div>
+            </div>
+
+            <div id="Lu" class="element hover expandable lanthanide" onclick="expand('Lu')">
+                <div class="title">Lu</div>
+                <div class="description"> Lutetium </div>
+                <div class="content"> <p> h </p> </div>
+            </div>
+
+            <div id="gap5"></div>
+            <div id="gap6"></div>
+            
+            <div id="Th" class="element hover expandable actinide" onclick="expand('Th')">
+                <div class="title">Th</div>
+                <div class="description"> Thorium </div>
+                <div class="content"> <p> h </p> </div>
+            </div>
+
+            <div id="Pa" class="element hover expandable actinide" onclick="expand('Pa')">
+                <div class="title">Pa</div>
+                <div class="description"> Protactinium </div>
+                <div class="content"> <p> h </p> </div>
+            </div>
+
+            <div id="U" class="element hover expandable actinide" onclick="expand('U')">
+                <div class="title">U</div>
+                <div class="description"> Uranium </div>
+                <div class="content"> <p> h </p> </div>
+            </div>
+
+            <div id="Np" class="element hover expandable actinide" onclick="expand('Np')">
+                <div class="title">Np</div>
+                <div class="description"> Neptunium </div>
+                <div class="content"> <p> h </p> </div>
+            </div>
+
+            <div id="Pu" class="element hover expandable actinide" onclick="expand('Pu')">
+                <div class="title">Pu</div>
+                <div class="description"> Plutonium </div>
+                <div class="content"> <p> h </p> </div>
+            </div>
+
+            <div id="Am" class="element hover expandable actinide" onclick="expand('Am')">
+                <div class="title">Am</div>
+                <div class="description"> Americium </div>
+                <div class="content"> <p> h </p> </div>
+            </div>
+            
+            <div id="Cm" class="element hover expandable actinide" onclick="expand('Cm')">
+                <div class="title">Cm</div>
+                <div class="description"> Curium </div>
+                <div class="content"> <p> h </p> </div>
+            </div>
+
+            <div id="Bk" class="element hover expandable actinide" onclick="expand('Bk')">
+                <div class="title">Bk</div>
+                <div class="description"> Berkelium </div>
+                <div class="content"> <p> h </p> </div>
+            </div>
+
+            <div id="Cf" class="element hover expandable actinide" onclick="expand('Cf')">
+                <div class="title">Cf</div>
+                <div class="description"> Californium </div>
+                <div class="content"> <p> h </p> </div>
+            </div>
+
+            <div id="Es" class="element hover expandable actinide" onclick="expand('Es')">
+                <div class="title">Es</div>
+                <div class="description"> Einsteinium </div>
+                <div class="content"> <p> h </p> </div>
+            </div>
+
+            <div id="Fm" class="element hover expandable actinide" onclick="expand('Fm')">
+                <div class="title">Fm</div>
+                <div class="description"> Fermium </div>
+                <div class="content"> <p> h </p> </div>
+            </div>
+
+            <div id="Md" class="element hover expandable actinide" onclick="expand('Md')">
+                <div class="title">Md</div>
+                <div class="description"> Mendelevium </div>
+                <div class="content"> <p> h </p> </div>
+            </div>
+
+            <div id="No" class="element hover expandable actinide" onclick="expand('No')">
+                <div class="title">No</div>
+                <div class="description"> Nobelium </div>
+                <div class="content"> <p> h </p> </div>
+            </div>
+
+            <div id="Lr" class="element hover expandable actinide" onclick="expand('Lr')">
+                <div class="title">Lr</div>
+                <div class="description"> Lawrencium </div>
+                <div class="content"> <p> h </p> </div>
+            </div>
+
+
+        </div>
+        <script src="script.js"></script>
+    </body>  
+
+{% endblock main %}

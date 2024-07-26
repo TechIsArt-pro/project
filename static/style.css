@@ -1,0 +1,278 @@
+body{
+    background-color: #057bd2;
+    margin: 0px;
+}
+
+.centered{
+    text-align: center;
+}
+
+.lefted{
+    text-align: left;
+}
+
+.periodic-table{
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 100px;
+    display: inline-grid;
+    grid-template-columns: repeat(18, 100px); 
+    grid-template-rows: repeat(10, 100px); 
+    column-gap: 1px;
+    row-gap: 1px;
+
+}
+
+.element{
+    position: relative;
+    padding: 15px;
+    width: 65px;
+    height: 65px;
+    z-index: 1;
+    transition: transform 0.3s ease;
+}
+
+.title{
+    position:relative;
+    font-family: 'Brush Script MT', cursive;
+    text-align: left;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.description{
+    position:relative;
+    font-family: 'Arial', sans-serif;
+    text-align: left;
+    font-size: 15px;
+}
+
+.hover:hover{
+    transform: scale(1.15);
+}
+
+.expandable{
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.expandable.expanded {
+    width: 300px;
+    height: 200px;
+    z-index: 3;
+}
+
+.content{
+    padding: 10px;
+    text-align: left;
+}
+
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #05d259;
+}
+
+.left{
+    float: left;
+}
+
+.right{
+    float: right;
+}
+
+li a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 20px 25px;
+    font-size: 23px;
+    text-decoration: none;
+    font-family: 'Brush Script MT', cursive;
+}
+
+li a:hover {
+    background-color: #057bd2;
+    opacity: 1;
+}
+
+
+h1{
+    padding: 20px 20px;
+    font-family: 'Brush Script MT', cursive;
+    font-weight: bold;
+}
+
+/*.title{
+    float: left;
+    padding-left: 200px;
+    padding-top: 50px;
+}*/
+
+#content {
+    height: auto;
+    padding-bottom: 50px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+ }
+
+#footer{
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    height: 50px;
+}
+
+button{
+    background-color:#05d259;
+    font-family:  'Brush Script MT', cursive;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+    border: none;
+    padding: 10px 20px;
+    transition: transform 0.2s ease;
+}
+
+button:hover{
+    opacity: 1;
+    transform: scale(1.15);
+}
+
+p {
+    font-family:  'Brush Script MT', cursive;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+    padding: 20px 30px;
+}
+
+input{
+    background-color:#057bd2;
+    font-family:  'Brush Script MT', cursive;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+    border: none;
+    outline: none;
+    padding: 20px 30px;
+}
+
+.inline{
+    display: inline-block;
+}
+
+#Quantities{
+    font-family:  'Brush Script MT', cursive;
+    border-collapse: collapse;
+    width: 60%;
+}
+
+#Quantities td{
+    border: 5px solid #05d259;
+    padding: 5px;
+}
+
+
+/*the css code for removing spinners is code form w3schools*/
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield; 
+}
+
+textarea{
+    resize: none;
+    background-color:#057bd2;
+    border: none;
+    outline: none;
+    font-size: 20px;
+    padding: 20px 400px;
+    text-align: left;
+    width: 1125px;
+}
+
+.containercenter{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.containerleft{
+    justify-content: left;
+    align-items: left;
+    display: flex;
+    flex-direction: column;
+}
+
+#gap1{
+    grid-column: 2/span 16;
+    grid-row: 1;
+}
+
+#gap2{
+    grid-column: 3/span 10;
+    grid-row: 2;
+}
+
+#gap3{
+    grid-column: 3/span 10;
+    grid-row: 3;
+}
+
+#gap4{
+    grid-column: 1/span 3;
+    grid-row: 8;
+}
+
+#gap6{
+    grid-column: 1/span 3;
+    grid-row: 9;
+}
+
+.nonmetal{
+    background-color: rgb(173, 173, 4);
+}
+
+.alkalimetal{
+    background-color: rgb(161, 2, 2);
+}
+
+.alkalineearthmetal{
+    background-color: #0892f5;
+}
+
+.transitionmetal{
+    background-color: #d6c845;
+}
+
+.lanthanide{
+    background-color: #1f6923;
+}
+
+.actinide{
+    background-color: rgb(42, 89, 116);
+}
+
+.posttransitionmetal{
+    background-color: #6ad611;
+}
+
+.metalloid{
+    background-color: #9bd205;
+}
+
+.noblegas{
+    background-color:rgb(143, 69, 0);
+}

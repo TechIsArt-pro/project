@@ -1,0 +1,54 @@
+{% extends "layout.html" %}
+
+{% block title %}
+New entry
+{% endblock %}
+
+{% block main %}
+{% for entry in entry %}
+<form action="/edit/{{entry.id}}" method="post">
+    
+   
+    <div class="centered">
+        <input maxlength="20" autocomplete="off" autofocus name="title" value="{{entry.title}}" placeholder="Title" type="text"> <p class="inline">DATE: {{ entry.date }}</p>
+    </div>
+
+    <div id="content" class="centered">
+
+        <p> Quantities Table</p><br>
+        <table id="Quantities">
+            <tr>
+                <td>Name</td>
+                <td>Weight(gr)</td>
+                <td>Moles</td>
+                <td>Equivalents</td>
+            </tr>
+
+            <tr>
+                <td> <input maxlength="20" autocomplete="off" autofocus name="name1" value="{{entry.main_reagent}}" placeholder="Main reagent" type="text"> </td>
+                <td> <input maxlength="20" autocomplete="off" autofocus name="weight1" value="{{entry.main_weight}}" placeholder="Weight" type="number"> </td>
+                <td> <input id="moles1" maxlength="20" autocomplete="off" autofocus name="moles1" value="{{entry.main_moles}}" placeholder="Moles" type="number"> </td>
+                <td> <p>1</p> </td>
+            </tr>
+            
+            <tr>
+                <td> <input maxlength="20" autocomplete="off" autofocus name="name2" value="{{entry.reagent}}" placeholder="Reagent" type="text"> </td>
+                <td> <input maxlength="20" autocomplete="off" autofocus name="weight2" value="{{entry.weight}}" placeholder="Weight" type="number"> </td>
+                <td> <input id="moles2" maxlength="20" autocomplete="off" autofocus name="moles2" value="{{entry.moles}}" placeholder="Moles" type="number" oninput="findEquivalence()"> </td>
+                <td> <p id="equivalence"></p> </td>
+            </tr>
+        </table>
+        
+       
+</div>
+
+<textarea maxlength="2000" autocomplete="off" autofocus name="text" placeholder="Text" type="text">{{entry.content}}</textarea>
+    
+<div id="footer" class="centered">
+    <button class="submitentry" type="submit"> Submit Entry </button>
+</div>
+
+    {% endfor %}
+
+</form>
+{% endblock %}

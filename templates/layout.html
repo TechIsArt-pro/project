@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>       
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"> 
+        <meta charset="utf-8">  
+        <meta name="viewport" content="initial-scale=1, width=device-width">      
+        <title>ChemLab50: {% block title %}{% endblock %}</title>
+    </head>
+    <body>
+        {% if session["user_id"]%}
+        <ul>
+            <li class="left"><img src="{{ url_for('static', filename='logo.jpg') }}" alt="ChemLab50 logo" width="212" height="67"></li> <!-- logo made with canva -->
+            <li class="left"><a  href="/">Home</a></li>
+            <li class="left"><a href="/periodictable">Periodic Table</a></li>
+            <li class="left"><a href="/labbook">Lab Book</a></li>
+            <li class="right"><a href="/logout">Logout</a></li>
+            <!--{% block name %}{% endblock %}-->    
+        </ul>
+        
+        {% else %}
+        <ul>
+            <li class="left"><img src="{{ url_for('static', filename='logo.jpg') }}" alt="ChemLab50 logo" width="212" height="67"><li>
+            <li class="right"><a href="/login">Login</a></li>
+            <li class="right"><a href="/register">Register</a></li>
+        </ul>
+        {% endif %}
+
+        {% block main %}{% endblock %}
+
+        <script src="{{ url_for('static', filename='script.js') }}"></script>
+    </body>  

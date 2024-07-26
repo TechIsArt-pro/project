@@ -1,0 +1,17 @@
+{% extends "layout.html"%}
+
+{% block title %}
+Lab Book
+{% endblock %}
+
+{% block main %}
+
+<h1> Lab Book </h1>
+<ul>
+    {% for entry in entries %}    
+    <li><a href="/edit/{{ entry["id"] }}"> {{entry["title"]}} {{entry["date"]}} </a></li>
+    {% endfor %}
+    <li><a href="/entry">New entry <b>+</b></a></li>
+</ul>
+
+{% endblock %}
